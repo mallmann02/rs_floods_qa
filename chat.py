@@ -44,8 +44,11 @@ class LLM_RAG:
 
     def print_name(self):
         print("""
+
             ┳┓┏┓┏┓┏┓┓ 
             ┣┫┣┫┃┓┣┫┃ 
             ┛┗┛┗┗┛┛┗┗┛
             """, end='\n\n')
 
+chat = LLM_RAG()
+chat.run()
