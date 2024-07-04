@@ -25,6 +25,7 @@ class LLM_RAG:
             print(message['message']['content'], end='', flush=True)
         
     def run(self):
+        self.print_name()
         is_day = time.localtime().tm_hour >= 6 and time.localtime().tm_hour < 18
         if is_day:
             print("Bom dia! Sou RAGAL, um assistente virtual especializado nas cheias do Rio Grande do Sul. Como posso te ajudar?\n\n")
@@ -38,7 +39,13 @@ class LLM_RAG:
             if user_question == "sair":
                 print("Até mais!")
                 break
-            
+
             self.chat(user_question)
 
+    def print_name(self):
+        print("""
+            ┳┓┏┓┏┓┏┓┓ 
+            ┣┫┣┫┃┓┣┫┃ 
+            ┛┗┛┗┗┛┛┗┗┛
+            """, end='\n\n')
 
